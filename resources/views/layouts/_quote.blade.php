@@ -17,6 +17,6 @@
 	<link rel="stylesheet" type="text/css" href="/semantic/calendar.min.css">
 
 	<!-- 独立渲染-->
-	<link rel="stylesheet" type="text/css" href="/CSS/Tech.css">
+	
 
 	<!-- 独立引用 -->

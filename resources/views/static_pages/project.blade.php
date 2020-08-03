@@ -158,50 +158,8 @@ Vue.component('projectStep', {
 			></step>
 		</div>
 		
-		<div :id="index+'panel0'" class="ui active tab secondary  segment " style="padding:20px;border:0px;margin:0px" >
+		<div :id="index+'panel0'" class="ui  tab secondary  segment " style="padding:20px;border:0px;margin:0px" >
 			<i class="blue edit icon " data-content="修改" style="position:absolute;right:0px;top:5px;"></i>
-			<!--<div class="ui two column very relaxed stackable  grid">
-				<div class="column">
-					<label>项目背景</label>
-					<div class="ui divider"></div>
-					<p>为进一步贯彻落实党中央、国务院重要指示批示精神，民航局党组和空管局党委的重大决策部署，
-					重点结合“国庆70周年”重大保障活动，开展管制业务运行、设备管理运行、保密与网络安全等方面工作专项检查，
-					希望通过此次检查，发现安全运行中的问题与困难，帮助天津分局强化安全运行管理，提高管理水平。
-					</p>
-				</div>
-				<div class=" column" style="">
-					<label>项目目标</label>
-					<div class="ui divider"></div>
-					<p>联合督查组成员分专业，分别深入各一线运行岗位开展督查工作。
-					重点围绕、管制业务、设备运行、空域管理及规划、网络信息安全、保密工作、法律事务管理、安保消防反恐等方面工作开展督查。
-					督查组成员不辞辛劳，通过听取汇报、现场问询、检查记录、实地检查等方式对分局各项工作开展情况进行了细致地督导检查。
-					同时，对天津空管分局各项工作的好做法、好措施给予了充分肯定，对不足之处提出了意见建议。
-					</p>
-					<div class="ui medium header">
-					  <i class=" blue edit icon "></i>
-					  <div class="content">安全管理
-						<div class="sub header">
-							asdasdsdassd 
-						</div>
-					  </div>
-					</div>
-				</div>	
-			</div>
-				<div class="ui vertical divider">&</div>
-			<div class="ui horizontal segments">
-			  <div class="ui segment">
-				<p>联合督查组成员分专业，分别深入各一线运行岗位开展督查工作。
-					重点围绕、管制业务、设备运行、空域管理及规划、网络信息安全、保密工作、法律事务管理、安保消防反恐等方面工作开展督查。
-					督查组成员不辞辛劳，通过听取汇报、现场问询、检查记录、实地检查等方式对分局各项工作开展情况进行了细致地督导检查。
-					同时，对天津空管分局各项工作的好做法、好措施给予了充分肯定，对不足之处提出了意见建议。</p>
-			  </div>
-			  <div class="ui segment">
-				<p></p>
-			  </div>
-			  <div class="ui segment">
-				<p></p>
-			  </div>
-			</div>-->
 			<div class="ui three column divided grid" style="padding:15px">
 			  <div class="column" style="padding-top:0px;overflow: auto;height:300px">
 				<p>联合督查组成员分专业，分别深入各一线运行岗位开展督查工作。
@@ -402,7 +360,7 @@ var project=new Vue({
 $('.ui.accordion').accordion();
 $('.ui .button ').popup();
 $('.ui .icon ').popup();
-$('.menu .item').tab();
+//$('.menu .item').tab();
 
 </script>
 </html>

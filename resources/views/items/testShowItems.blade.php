@@ -6,7 +6,8 @@
 	<meta charset="utf-8">
 
 	@include('layouts._quote')
-
+	
+	<link rel="stylesheet" type="text/css" href="/CSS/Tech.css">
 </head>
 <body >
 <div id="app">

@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 //系统登录入口
 Route::get('/', function () {
     //return view('welcome');
-    echo "登录界面包含task和project的入口";
+    //echo "登录界面包含task和project的入口";
+    return view('index');
 });
 
 //测试test路由
