@@ -20,8 +20,9 @@
 	<bar
 		v-bind:login="login"
 	></bar>
-	<div class='container'>基础页面</div>
 
+	
+	
 </div>
 </body>
 
@@ -36,10 +37,5 @@
 			login:{name:'检查员'},
 		}
 	})
-</script>
-
-<!-- Sementic UI的JQuery选择区 -->
-<script type="text/javascript">
-
 </script>
 </html>

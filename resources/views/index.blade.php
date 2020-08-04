@@ -6,6 +6,7 @@
 	<meta charset="utf-8">
 
 	@include('layouts._quote')
+	
 <style type="text/css">
 #back{
 	

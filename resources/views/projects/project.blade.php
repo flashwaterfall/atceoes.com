@@ -5,54 +5,36 @@
  	<link rel="Shortcut Icon" href="/images/logo.png" /> 
 	<meta charset="utf-8">
 
-	<!-- Sementic UI-->
-	<link rel="stylesheet" href="/semantic/semantic.min.css">	<!--同一文件夹下必须包含/themes文件夹，因为图标在这里边-->
-	<script src="/js/jquery-3.5.1.js"></script>
-	<script src="/semantic/semantic.min.js"></script>	<!--semantic.min.js引用必须在jQuery之后-->
-	<!-- VUE.JS-->
-	<script src="/vue/vue.min.js"></script>
-	<script src="/axios/axios.min.js"></script>
+	<!-- 基础引用合集 -->
+	@include('layouts._quote')		
 
 	<!-- 独立渲染-->
 	<link rel="stylesheet" type="text/css" href="/css/Tech.css">
+	
+	<!-- 独立引用-->
 
 </head>
 <body>
-
+<div id='app'>
 <!--头部 包含导航-->
-<header class="ui red segment" id="header" >
-<div class="container " >
-	<div id="header" class="ui  menu">
-		<div class="item" style="padding:10px">
-			<img class="ui mini image " src="images/logo.png">
-		</div>
-		<a class="item">Features</a>
-		<a class="item">Testimonials</a>
-		<a class="item">Sign-in</a>
-		<div class="right menu">
-			<a class="item ">注册</a>
-			<a class="item ">Help</a>
-		</div>
-	</div>
-</div>
-</header>
+	<bar
+		v-bind:login="login"
+	></bar>
 
 <!--主体部分 -->
 <main class="container" id="main" >
-
-<!--项目信息部分 -->
-<article >
+	<!--项目信息部分 -->
 	<div class="ui unstackable  segment">
-	<div class="ui left very close rail" >
-		<div class="ui segment">
-			<p>进行中项目</p>
-			<p>未开始项目</p>
-			<p>已完成项目</p>
-			<p>已过期项目</p>
-			
+		<div class="ui left very close rail" >
+			<div class="ui segment">
+				<p>进行中项目</p>
+				<p>未开始项目</p>
+				<p>已完成项目</p>
+				<p>已过期项目</p>
+				
+			</div>
 		</div>
-	</div>
-		<div id="project" class="ui divided items "  style="margin:0">
+		<div  class="ui divided items "  style="margin:0">
 			<a  v-on:click="submit" class="ui button">新增项目</a>
 			<project-test
 				v-for="(content,index) in projects"
@@ -64,16 +46,12 @@
 			></project-test>
 		</div>
 	</div>
-</article>
-<!--边栏部分 -->
-<aside >
-</aside>
-	
 </main>
+</div>
 
-<!--尾部 -->
-<footer>
-</footer>
+
+<!-- VUE.js组件区 -->
+<script type="text/javascript" src="/components/component.js"></script>
 
 <script>
 Vue.component('project-test', {
@@ -252,7 +230,7 @@ Vue.component('divider', {
 </script>
 <script>
 var project=new Vue({
-	el: '#project',
+	el: '#app',
 	data: {
 		projects: [
 			{imgSrc:"images/wireframe/image.png",header:"My Neighbor Totoro",meta:"IFC Cinema",taskNum:5,
@@ -294,7 +272,8 @@ var project=new Vue({
 			summary:{title:"内部总结",description:"检查组内部复核检查<br>结果，编写项目总评。"},
 			inform:{title:"通报结果",description:"向受检单位正式<br>通报检查结果。"},
 			end:{title:"项目结束",description:"保存资料。提供检<br>查分析报告下载。"}
-		}
+		},
+		login:{name:'检查员'},
 	},
 	beforeCreate:function(){
 		console.log('beforecreate');

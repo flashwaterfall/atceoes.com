@@ -8,20 +8,18 @@ use App\Models\Item;
 
 class ItemsController extends Controller
 {
-    public function testShwoItems()
+    public function showAll()   //展示所有item的视图
     {    
-    	return view('items/testShowItems');
+    	return view('items/showAllItems');
     }
 
- 	public function inputItem()
+ 	public function input()   //返回单个输入item信息的视图
     {
-    	//echo 'add2';
-    	return view('items/testInsertItem');
-
+    	return view('items/inputItem');
     }
 
 
-    public function insertItem1()
+    public function insert1()   //向数据库插入单个item的方法1：
     {
     	echo '提交方式1：实例化模型';
     	// 表映射到模型类【实例化模型】
@@ -41,10 +39,8 @@ class ItemsController extends Controller
         dd($item -> save());
     }
 
-	public function insertItem2(Request $request)
+	public function insert2(Request $request)      //表单向数据库插入单个item的方法2
     {    
-    	//echo $request->input('id','10076');
-
     	echo '提交方式2';
     	
     	$item = new Item();

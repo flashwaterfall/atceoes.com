@@ -14,25 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 //系统登录入口
 Route::get('/', function () {
-    //return view('welcome');
-    //echo "登录界面包含task和project的入口";
     return view('index');
 });
 
 //测试test路由
-Route::get('/testInsertProject', 'ProjectsController@testInsertProject');    //录入project
-
-Route::get('/testShwoItems', 'ItemsController@testShwoItems');    //测试显示所有的Item
-Route::get('/inputItem', 'ItemsController@inputItem');    //测试录入item界面
-Route::get('/insertItem1', 'ItemsController@insertItem1');    //测试提交item信息方式1
-Route::post('/insertItem2', 'ItemsController@insertItem2');    //测试提交item信息方式2
-
-Route::get('/testModal', 'StaticPagesController@modal');    //测试modal
-
+Route::get('/test/modal', 'TestsController@modal');    //测试modal
+Route::get('/test/basic', 'TestsController@basic');    //基础页面路由
 
 //project相关路由，后续根据需要变更get/post的提交方式
-Route::get('/project', 'StaticPagesController@project');    //project主界面
-
+Route::get('/project', 'ProjectsController@project');    //project主界面
+Route::get('/project/input', 'ProjectsController@input');    //表单录入project
 Route::get('/project/login', function () {
     echo "project登录前的验证路由";
 });
@@ -145,8 +136,13 @@ Route::get('/inspector/task/view/10', function () {
 Route::get('/inspector/task/view/20', function () {
     echo "task状态20的信息路由";
 });
+Route::get('/inspector/input', 'InspectorsController@input');    //表单输入inspector信息
 
-
+// item相关路由
+Route::get('/item/input', 'ItemsController@input');    //表单输入单个item信息
+Route::get('/item/showAll', 'ItemsController@showAll');    //展示所有item信息
+Route::get('/item/insert1', 'ItemsController@insert1');    //测试提交item信息方式1
+Route::post('/item/insert2', 'ItemsController@insert2');    //测试提交item信息方式2
 
 
 
