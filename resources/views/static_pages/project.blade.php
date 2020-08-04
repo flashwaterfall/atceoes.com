@@ -14,7 +14,7 @@
 	<script src="/axios/axios.min.js"></script>
 
 	<!-- 独立渲染-->
-	<link rel="stylesheet" type="text/css" href="/CSS/Tech.css">
+	<link rel="stylesheet" type="text/css" href="/css/Tech.css">
 
 </head>
 <body>

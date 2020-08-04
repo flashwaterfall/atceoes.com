@@ -14,7 +14,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 	
 	<!-- 独立渲染-->
-	<link rel="stylesheet" type="text/css" href="CSS/Tech.css">
+	<link rel="stylesheet" type="text/css" href="css/Tech.css">
 </head>
 <body>
 	<div class="ui divider"></div>

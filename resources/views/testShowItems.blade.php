@@ -22,7 +22,7 @@
 	<script type="text/javascript" src="/semantic/calendar.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="/semantic/calendar.min.css">
 	<!-- 独立渲染-->
-	<link rel="stylesheet" type="text/css" href="/CSS/Tech.css">
+	<link rel="stylesheet" type="text/css" href="/css/Tech.css">
 	<script type="text/javascript" src="/js/project.js"></script>
 
 
